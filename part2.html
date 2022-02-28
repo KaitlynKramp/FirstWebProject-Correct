@@ -70,8 +70,10 @@
         </tr>
     </table>
 
-    <form>
-        <fieldset>
+    <h2 style="color:red">*This is not a secure website, please do not input any personal information*</h2>
+
+    <form name="website-feedback" id="feedback" method="post">
+        <fieldset id="feedback">
             <legend>Give us feedback!</legend>
             <label for="rate">Rating from 1 to 10</label>
             <input type="number" id="rate"> <br/> <br/>
@@ -82,13 +84,15 @@
                 <option value="Bulldog Bat">Bulldog Bat</option>
             </select><br/><br/>
             <label for="feed">Give us feedback</label>
-            <textarea id="feed" rows="4" cols="50"></textarea>
+            <textarea id="feed" rows="4" cols="50"></textarea><br/><br/>
             <input type="submit">
             <input type="reset">
 
         </fieldset>
-        
-        <fieldset>
+    </form>
+
+    <form name="sign-up-for-bat-club" id="sign-up" method="post">
+        <fieldset id="sign-up">
             <legend>Sign up for our bat club!</legend>
             <label for="fname">First name:</label>
             <input type="text" id="fname" name="fname"> <br/> <br/>
