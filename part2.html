@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bat Information Website</title>
 </head>
+<style>
+    h3 {
+        text-decoration: underline;
+    }
+    h4 {
+        text-decoration: underline;
+        text-decoration-color: red;
+    }
+</style>
 <body>
+<header>
+
     <h1>Bats and Why They are Amazing</h1>
 
     <h2>A totally unbiased website</h2>
@@ -14,6 +25,8 @@
     <iframe title="video of a baby bat flapping and yawning" width="560" height="315" 
     src="https://www.youtube.com/embed/BV1TNxBh_gM" title="YouTube video player" frameborder="0"
      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</header>
+<section>
 
     <h3>Reasons why bats are awsome</h3>
     <ul>
@@ -70,21 +83,29 @@
         </tr>
     </table>
 
-    <h2 style="color:red">*This is not a secure website, please do not input any personal information*</h2>
+</section>
+
+    <h4 style="color:red">*This is not a secure website, please do not input any personal information*</h4>
+
+<section>
 
     <form name="website-feedback" id="feedback" method="post">
-        <fieldset id="feedback">
+        <fieldset form="feedback" name="feedback-contents">
             <legend>Give us feedback!</legend>
+
             <label for="rate">Rating from 1 to 10</label>
-            <input type="number" id="rate"> <br/> <br/>
+            <input type="number" name="rating" id="rate"> <br/> <br/>
+
             <label for="fav">Which bat is your favourite?</label>
             <select id="fav">
                 <option value="Golden-Crowned Flying Fox">Golden-Crowned Flying Fox</option>
                 <option value="Vampire Bat">Vampire Bat</option>
                 <option value="Bulldog Bat">Bulldog Bat</option>
             </select><br/><br/>
+
             <label for="feed">Give us feedback</label>
             <textarea id="feed" rows="4" cols="50"></textarea><br/><br/>
+
             <input type="submit">
             <input type="reset">
 
@@ -92,26 +113,34 @@
     </form>
 
     <form name="sign-up-for-bat-club" id="sign-up" method="post">
-        <fieldset id="sign-up">
+        <fieldset form="sign-up" name="sign-up-contents">
             <legend>Sign up for our bat club!</legend>
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"> <br/> <br/>
-            <label for="lname">Last name:</label>
-            <input type="text" id="fname"> <br/><br/>
-            <label for="email">Email</label>
-            <input type="email" id="email"> <br/><br/>
+
+            <label for="fname">First name (required):</label>
+            <input type="text" id="fname" name="first-name" minlength="1" maxlength="40" required> <br/> <br/>
+
+            <label for="lname">Last name (required):</label>
+            <input type="text" name="last-name" id="fname" minlength="1" maxlength="40" required> <br/><br/>
+
+            <label for="email">Email (required)</label>
+            <input type="email" name="email" id="email" minlength="5" maxlength="40" required> <br/><br/>
+
             <label for="tele">Telephone</label>
-            <input type="tel" id="tele"> <br/><br/>
+            <input type="tel" name="telephone-number" id="tele" minlength="9" maxlength="11"> <br/><br/>
+
             <label for="offer">I would like to offer up all my possessions to bat club</label>
-            <input type="checkbox" id="offer"><br/><br/>
+            <input type="checkbox" name="offer-check" id="offer"><br/><br/>
+
             <label for="annoy">I would like to receive emails and phone calls hourly</label>
-            <input type="checkbox" id="annoy"><br/><br/>
+            <input type="checkbox" name="annoy-check" id="annoy"><br/><br/>
+
             <label for="cult">I am interested in bat cult</label>
-            <input type="checkbox" id="cult"><br/><br/>
+            <input type="checkbox" name="cult-check" id="cult"><br/><br/>
+
             <input type="submit">
             <input type="reset">
         </fieldset>
     </form>
-    
+</section>
 </body>
 </html>
